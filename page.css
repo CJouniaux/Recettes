@@ -9,10 +9,11 @@ nav > img {
     display: flex;
     justify-content: start;
     align-self: center;
+    margin: 1rem;
     }
 nav {
     display: flex;
-    background-color: rgba(22, 159, 113, 0.607);
+    background-color: rgba(245, 179, 223, 0.607);
     height: 4rem;
     width: auto;
 }
