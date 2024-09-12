@@ -3,7 +3,15 @@
     padding: 0%;
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
-    color: rgb(24, 117, 31);
+    color: var(--green);
+}
+:root {
+    --green: rgb(24, 117, 31);
+    --lightgreen: rgb(204, 224, 186);
+    --darkgreen: #17501d;
+    --pink: #FD99A2;
+    --lightpink: #fecdd1;
+    --darkpink: #881333;
 }
 body {
     background: #D0E4F5 url("https://img.freepik.com/premium-vector/seamless-pattern-kawaii-cute-broccoli-vector-illustration-design-scrapbooking-fabric-wallpap_107335-446.jpg") repeat scroll 0 0;
@@ -18,7 +26,7 @@ nav > img {
     }
 nav {
     display: flex;
-    background-color: rgba(243, 206, 209);
+    background-color: var(--lightpink);
     height: 4rem;
     width: 100%;
     font-size: large;
@@ -30,23 +38,33 @@ nav > div {
     justify-content: space-evenly;
     align-items: center;
 }
-
+nav p {
+    display: none;
+}
 a {
     text-decoration: none;
-    color: rgb(24, 117, 31);
+    color: var(--green);
 }
 header {
-    height: 20%;
+    height: 15rem;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     font-size: x-large;
     background-color: rgba(243, 206, 209, 0.9);
+    position: relative;
+
+    overflow: hidden;
 }
 header > p {
     width: 40%;
     align-self: center;
     /* text-shadow: 2px 2px 2px rgb(11, 59, 15) ; */
+}
+header img {
+    position: absolute;
+    right: 10%;
+    top: -0.4rem;
 }
 .cards {
     display: flex;
@@ -62,8 +80,8 @@ header > p {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: rgb(204, 224, 186);
-    border: 1px solid rgb(24, 117, 31);
+    background-color: var(--lightgreen);
+    border: 1px solid var(--green);
     border-radius: 10px;
     text-align: center;
 }
@@ -79,15 +97,15 @@ header > p {
     height: 2rem;
     cursor: pointer;
     background-color: rgba(24, 117, 32, 0.5);
-    border: 1px solid rgb(24, 117, 31);
+    border: 1px solid var(--green);
     border-radius: 1rem;
     transition-duration: 0.4s;
     color: rgba(243, 206, 209);
 }
 .card > button:hover {
     background-color: rgba(243, 206, 209, 0.9);
-    border: 1px solid rgb(253, 153, 162);
-    color: rgb(24, 117, 31);
+    border: 1px solid var(--pink);
+    color: var(--green);
 }
 footer {
     height: 20%;
@@ -107,4 +125,80 @@ footer div {
 }
 footer .Logo {
     height: 3rem;
+}
+footer img {
+    max-width: 100%;
+}
+@media (max-width:650px) {
+    nav {
+        a {
+            display: none;
+        }
+        p {
+            display: flex;
+            font-size: 3rem;
+            padding-right: 2rem;
+            align-self: center;
+        }
+    }
+    header {
+        font-size: medium;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        padding-left: 1rem;
+        img {
+            right: -5rem;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 80%;
+    }
+    footer {
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        padding: 0%;
+        div { 
+            width: 90%;
+        }
+    }
+}
+@media (prefers-color-scheme: dark) {
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: "Josefin Sans", sans-serif;
+        box-sizing: border-box;
+        color: var(--lightpink);
+    }
+    body {
+        background: var(--darkgreen);
+    }
+    nav {
+        background-color: color-mix(in srgb, var(--pink) 75%, transparent);
+        p {
+            color: var(--green);
+        }
+    }
+    header {
+        background-color: color-mix(in srgb, var(--green) 50%, transparent);
+    }
+    .card {
+        background-color: color-mix(in srgb, var(--green) 50%, transparent);
+    }
+    footer {
+        background-color: color-mix(in srgb, var(--green) 50%, transparent);
+    }
+    .card button {
+        background-color: color-mix(in srgb, var(--pink) 75%, transparent);
+        border: 1px solid var(--darkpink);
+        color: var(--darkgreen);
+    }
 }
