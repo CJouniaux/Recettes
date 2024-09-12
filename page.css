@@ -92,6 +92,7 @@ header img {
     height: 2rem;
 }
 .card button {
+    text-transform: capitalize;
     margin-top: 1rem;
     width: 40%;
     height: 2rem;
@@ -119,9 +120,9 @@ footer {
     padding-left: 2rem;
 }
 footer div {
-    width: 40%;
+    width: 60%;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
 }
 footer .Logo {
     height: 3rem;
@@ -165,6 +166,7 @@ footer img {
         display: flex;
         justify-content: center;
         padding: 0%;
+        padding-top: 1rem;
         div { 
             width: 90%;
         }
@@ -194,11 +196,18 @@ footer img {
         background-color: color-mix(in srgb, var(--green) 50%, transparent);
     }
     footer {
-        background-color: color-mix(in srgb, var(--green) 50%, transparent);
+        background-color: color-mix(in srgb, var(--pink) 75%, transparent);
+        p {
+            color: var(--green);}
     }
     .card button {
-        background-color: color-mix(in srgb, var(--pink) 75%, transparent);
-        border: 1px solid var(--darkpink);
+        background-color: var(--lightpink);
+        border: 1px solid var(--pink);
         color: var(--darkgreen);
+    }
+    .card button:hover {
+        background-color: var(--green);
+        border: var(--darkgreen);
+        color: var(--lightpink);
     }
 }
