@@ -4,8 +4,6 @@
     font-family: "Josefin Sans", sans-serif;
     box-sizing: border-box;
     color: var(--darkpink);
-    height: 100vh;
-    width: 100%;
 }
 :root {
     --green: rgb(24, 117, 31);
@@ -17,6 +15,10 @@
 }
 body {
     background: #D0E4F5 url("https://img.freepik.com/premium-vector/seamless-pattern-kawaii-cute-broccoli-vector-illustration-design-scrapbooking-fabric-wallpap_107335-446.jpg") repeat scroll 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 nav > img {
     height: 3rem;
@@ -46,15 +48,16 @@ nav a {
     }
     .form {
         display: flex;
-        align-self: bottom;
+        justify-content: center;
+        align-content: center;
     }
     form {
-        width: 80%;
-        height: 70%;
+        width: 70%;
         background-color: var(--lightgreen);
         display: flex;
         flex-direction: column;
         padding: 2rem;
+        margin: auto;
     }
     input {
         width: 80%;
