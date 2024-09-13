@@ -60,12 +60,35 @@ nav a {
         margin: auto;
     }
     input {
-        width: 80%;
+        width: 20%;
         margin: 1rem;
     }
     .checkbox {
         display: flex;
 
+    }
+    .animation {
+        display: flex;
+        align-items: center;
+        height: 400px;
+        width: 100%;
+    }
+    .broccoli {
+        height: 15%;
+        rotate: 90deg;
+       animation: Akita-eating-broccoli 5s linear 0s alternate backwards infinite;
+    }
+    .Akita {
+        position: absolute;
+        right: 0%;
+    }
+    @keyframes Akita-eating-broccoli {
+        from {
+            left: 0;
+        }
+        to {
+            left: 100%;
+        }
     }
     footer {
         height: 20%;
@@ -88,4 +111,5 @@ nav a {
     }
     footer img {
         max-width: 100%;
+        max-height: 100%;
     }
